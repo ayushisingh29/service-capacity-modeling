@@ -515,9 +515,11 @@ class NflxCassandraCapacityModel(CapacityModel):
         require_local_disks: bool = extra_model_arguments.get(
             "require_local_disks", False
         )
-        require_attached_disks: bool = extra_model_arguments.get(
-            "require_attached_disks", False
-        )
+        # require_attached_disks: bool = extra_model_arguments.get(
+        #     "require_attached_disks", False
+        # )
+        require_attached_disks: bool = False
+
         required_cluster_size: Optional[int] = extra_model_arguments.get(
             "required_cluster_size", None
         )
